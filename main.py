@@ -1,4 +1,5 @@
 import sqlite3
+
 conn = sqlite3.connect('example.db')  # This creates or opens the file 'example.db' as a database
 c = conn.cursor()
 # Create table

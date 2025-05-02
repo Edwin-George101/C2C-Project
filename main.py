@@ -5,7 +5,7 @@ from initialize_db import initialize_database
 
 #Needs to be better formated
 # should make better frames and lines
-
+#YO
 DB_NAME = 'bank.db'
 class Bank:
    def __init__(self, root):

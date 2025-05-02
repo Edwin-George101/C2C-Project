@@ -87,17 +87,15 @@ class Bank:
            show="headings",
            yscrollcommand=scrollbar.set
        )
-       #headers dfgdfg
+       #headers!!
        self.accounts_tree.heading("ID", text="id")
        self.accounts_tree.heading("Name", text="name")
        self.accounts_tree.heading("Email", text="email")
        self.accounts_tree.heading("Balance", text="balance")
-      
        self.accounts_tree.column("ID", width=70)
        self.accounts_tree.column("Name", width=130)
        self.accounts_tree.column("Email", width=190)
        self.accounts_tree.column("Balance", width=90)
-      
        self.accounts_tree.pack(fill=tk.BOTH, expand=True)
        scrollbar.config(command=self.accounts_tree.yview)
        # Action buttons
@@ -120,8 +118,7 @@ class Bank:
            command=self.withdraw,
            bg="#FF0000",
            fg="white",
-           padx=10
-       )
+           padx=10   )
        withdraw_btn.pack(side=tk.LEFT, padx=10)
       
        delete_btn = tk.Button(
@@ -130,8 +127,7 @@ class Bank:
            command=self.delete_account,
            bg="#FF0000",
            fg="white",
-           padx=10
-       )
+           padx=10   )
        delete_btn.pack(side=tk.LEFT, padx=10)
       
        refresh_btn = tk.Button(
@@ -140,8 +136,7 @@ class Bank:
            command=self.load_accounts,
            bg="#FF0000",
            fg="white",
-           padx=20
-       )
+           padx=20   )
        refresh_btn.pack(side=tk.RIGHT, padx=5)
 
    def create_account(self):
@@ -169,7 +164,7 @@ class Bank:
        #clear data
        for item in self.accounts_tree.get_children():
            self.accounts_tree.delete(item)
-          
+
        try:
            with sqlite3.connect(DB_NAME) as conn:
                cursor = conn.cursor()

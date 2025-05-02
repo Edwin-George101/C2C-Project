@@ -6,7 +6,6 @@ from initialize_db import initialize_database
 #Needs to be better formated
 # should make better frames and lines
 
-
 DB_NAME = 'bank.db'
 class Bank:
    def __init__(self, root):
@@ -144,7 +143,7 @@ class Bank:
            padx=20
        )
        refresh_btn.pack(side=tk.RIGHT, padx=5)
-      
+
    def create_account(self):
        name = self.name_entry.get()
        email = self.email_entry.get()
@@ -165,7 +164,7 @@ class Bank:
                self.load_accounts()
        except Exception as e:
            messagebox.showerror("Error", f"Failed to create account: {str(e)}")
-          
+
    def load_accounts(self):
        #clear data
        for item in self.accounts_tree.get_children():
@@ -254,7 +253,6 @@ class Bank:
                self.load_accounts()
        except Exception as e:
            messagebox.showerror("Error", f"Failed to delete account: {str(e)}")
-
 
 def main():
    root = tk.Tk()

@@ -53,10 +53,10 @@ class Bank:
        self.email_entry = tk.Entry(frame, width=30)
        self.email_entry.grid(row=1, column=1, padx=5, pady=5)
       
-       # Create button s!
+       # Create button !
        create_btn = tk.Button(
            frame,
-           text="create account",
+           text="create acc",
            command=self.create_account,
            bg="#4CAF53",
            fg="black",
